@@ -10,4 +10,9 @@ public class TurnOnACCommand implements ICommand{
         ac.turnOnAC();
         ac.setTemperature(24);
     }
+
+    @Override
+    public void undo() {
+        ac.turnOnAC();
+    }
 }
