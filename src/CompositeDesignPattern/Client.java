@@ -7,16 +7,19 @@ public class Client {
         FileSystem file3 = new File("File3.txt");
 
         //Folder
-        Folder folder1 = new Folder("Folder1");
-        Folder folder2 = new Folder("Folder2");
+        Directory directory1 = new Directory("Folder1");
+        Directory directory2 = new Directory("Folder2");
 
-        folder1.add(file1);
-        folder1.add(file3);
+        directory1.add(file1);
+        directory1.add(file3);
 
-        folder2.add(file2);
-        folder2.add(folder1);
+        directory2.add(file2);
+        directory2.add(directory1);
 
         System.out.println("Displaying Folder2 Structure");
-        folder2.display();
+        directory2.ls();
+
+        System.out.println("\nDisplaying Folder2 shallow Structure");
+        directory2.lsShallow();
     }
 }

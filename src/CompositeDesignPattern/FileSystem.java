@@ -1,5 +1,6 @@
 package CompositeDesignPattern;
 
 public interface FileSystem {
-    void display();
+    void ls();
+    void lsShallow();
 }

@@ -1,6 +1,6 @@
 package CompositeDesignPattern;
 
-public class File implements FileSystem{
+public class File implements FileSystem {
     private String name;
 
     public File(String name) {
@@ -8,7 +8,12 @@ public class File implements FileSystem{
     }
 
     @Override
-    public void display() {
-        System.out.println("File :" +name);
+    public void ls() {
+        System.out.println("File :" + name);
+    }
+
+    @Override
+    public void lsShallow() {
+        System.out.println("File: " + name);
     }
 }
